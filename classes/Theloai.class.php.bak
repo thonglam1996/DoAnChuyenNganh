@@ -1,0 +1,51 @@
+<?php
+class Theloai extends Db{
+	
+	
+	public function delete($id_the_loai)
+	{
+		$sql="delete from the_loai where id_the_loai=:id_the_loai ";
+		$arr =  Array(":id_the_loai"=>$id_the_loai);
+		return $this->exeNoneQuery($sql, $arr);	
+	}
+	
+	public function getById($id_the_loai)
+	{
+		$sql="select the_loai.* 
+			from the_loai
+			where  the_loai.id_the_loai=:id_the_loai ";
+		$arr = array(":id_the_loai"=>$id_the_loai);
+		$data = $this->exeQuery($sql, $arr);
+		if (Count($data)>0) return $data[0];
+		else return array();
+	}
+	
+	public function getAll()
+	{
+		return $this->exeQuery("select * from the_loai");
+	}
+	
+	public function saveEdit()
+	{
+		$id =Utils::postIndex("id_the_loai", "");
+		$name =Utils::postIndex("name_the_loai", "");
+		if ($name=="") return 0;//Error $id =="" || 
+		$sql="update the_loai set name_the_loai=:name  where the_loai.id_the_loai=:id";//where cat_id=:id
+		$arr = array(":name"=>$name, ":id"=>$id); //
+		return $this->exeNoneQuery($sql, $arr);
+		
+	}
+	//UPDATE `the_loai` SET `name_the_loai` = 'im into you' WHERE `the_loai`.`id_the_loai` = 10;
+	public function saveAddNew()
+	{
+		//$id =Utils::postIndex("cat_id", "");
+		$name =Utils::postIndex("name_the_loai", "");
+		if ($name=="") return 0;//Error $id =="" || 
+		$sql="insert into the_loai(id_the_loai, name_the_loai) values(NULL, :name_the_loai) ";
+		$arr = array(":name_the_loai"=>$name);
+		return $this->exeNoneQuery($sql, $arr);
+		
+	}
+
+}
+?>

@@ -1,0 +1,127 @@
+* {padding: 0; margin: 0; box-sizing: border-box; font: 16px sans-serif;}
+a {text-decoration: none;}
+ul {list-style-type: none;}
+body, html {height: 100%; background-color: #37474F;}
+/*----Start banner----*/
+#banner {
+	width: 100%; 
+	height: 50px; 
+	background-color: #555; 
+	position: fixed; 
+	text-align: right;
+	color: white;
+
+}
+#banner img {
+	margin: 10px; 
+	cursor: pointer;
+}
+#banner p {
+	float: left; 
+	font-size: 30px; 
+	line-height: 50px; 
+	margin-left: 10px; 
+	cursor: pointer;
+	transition: 0.5s;
+}
+#banner p:hover {color: #f15d58;}
+
+/*----End banner----*/
+
+#middle {
+	display: flex; 
+	flex-flow: wrap; 
+	height: 100%; 
+}
+
+#content {
+	width: 80%; 
+	margin: 50px 0 0 20%;
+	padding: 30px;
+	transition: all 0.5s;
+
+}
+.main-content {background-color: #CFD8DC; padding: 15px;}
+
+/*----Start left menu----*/
+#menu {
+	width: 20%; 
+	background-color: #263238; 
+	top: 50px; 
+	position: fixed; 
+	height: 100%;
+}
+
+.box-chucnang {
+	height: 50px; 
+	width: 100%; 
+	display: flex;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+.image {display: flex;}
+.box-chucnang img {
+	width: 25px; 
+	height: 25px; 
+	align-self: center; 
+	margin: 0 10px;
+}
+.box-chucnang p {
+	line-height: 50px; 
+	color: #B3E5FC;
+}
+#menu .hinhdaidien {width: 50px; height: 50px;}
+#menu .admin-name p {line-height: 35px;}
+#menu .admin-name {margin-bottom: 20px;}
+
+.box-chucnang:hover:not(.admin-name) {background-color: #37474F;}
+/*----End left menu----*/
+/*----Start form login----*/
+.form_login {
+	margin: auto; 
+	width: 300px; 
+	align-self: center; 
+}
+.form_login img {
+	width: 150px; 
+	display: block; 
+	margin: 0 auto 30px;
+	animation: earch linear 40s infinite;
+}
+@keyframes earch{
+	from {transform: rotate(0deg);}
+		to {transform: rotate(360deg);}
+
+}
+.form_login label {
+	font-size: 20px;
+	color: #B3E5FC;
+}
+.form_login .text-input {
+	width: 100%; 
+	height: 50px; 
+	padding: 5px;
+	margin: 10px 0;
+	font-size: 20px;
+	background-color: #555;
+	border: none;
+	color: #E1F5FE;
+	transition: all 0.5s;
+	border-bottom: 2px solid #f15d58;
+}
+
+.form_login input {outline: none;}
+.form_login input[type="password"] {margin-bottom: 30px; }
+.form_login .button {
+	float: right;
+	background-color: #f15d58; 
+	color: white; 
+	padding: 10px 18px; 
+	border: 1px solid #f15d58;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.form_login .button:hover {
+	background-color: rgba(0,0,0,0); 
+	color: #f15d58;
+}

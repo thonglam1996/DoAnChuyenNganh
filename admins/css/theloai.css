@@ -1,0 +1,18 @@
+
+input[type="Reset"], input[type="submit"] {background-color: #263238; color: #B3E5FC; border: none; outline: none; cursor: pointer; padding: 8px 16px; transition: all 0.5s;}
+input[type="Reset"]:hover , input[type="submit"]:hover { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+input[type="text"] {width: 100%; height: 30px; font-size: 20px; padding: 0 5px; margin-bottom: 10px; border: none; outline: none;}
+
+.table_form {margin: 0 auto;}
+.table_form td {font-size: 20px;}
+.legend {background-color: #555; color: white; padding: 10px; margin-bottom: 20PX;}
+.table_form select {margin-bottom: 10px; width: 100%; height: 30px; font-size: 20px; outline: 0}
+
+.tab-content {margin: 20px 0;} 
+.tab-content .show {width: 100%; border: 1px solid;}
+/*.tab-content .show th, .tab-content .show td, .tab-content .show tr {border: 1px solid;}*/
+.tab-content .show th, .tab-content .show td {padding: 0 5px; height: 35px;}
+.tab-content .show th {background-color: #006064; color: white;}
+.tab-content .show td {text-align: center;}
+.tab-content .show tr:nth-child(even) { background-color: #B0BEC5; }
+.tab-content .show img {width: 15px; margin-right: 3px;}

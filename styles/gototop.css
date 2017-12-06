@@ -1,0 +1,26 @@
+.btn{
+border:1px solid #4adcff;
+background:#24bde2;
+text-align:center;
+padding:5px;
+position:fixed;
+right:10px;
+cursor:pointer;
+display:none;
+color:#fff;
+font-size:11px;
+font-weight:900
+}
+
+.btn:hover{
+border:1px solid #ffa789;
+background:#ff6734
+}
+
+#bttop{
+bottom:78px
+}
+
+#auto-scroll{
+bottom:35px
+}
